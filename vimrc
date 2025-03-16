@@ -327,11 +327,13 @@ augroup language_specific_overrides
 	au FileType rust    set foldlevelstart=14 foldnestmax=18
 	au FileType python  let b:printf_pattern = 'print("%{}".format(%s))'
 	au FileType c       set commentstring=\/*\ %s\ *\/
-	" au FileType c       set noet ts=8 sw=0
-	au FileType c       set et ts=4 sw=4
+	au FileType c       set noet ts=8 sw=0
+	" au FileType c       set noet ts=4 sw=0
+	" au FileType c       set et ts=4 sw=4
 	au FileType cpp     set commentstring=\/\/\ %s
+	" au FileType cpp     set noet ts=4 sw=0
 	" au FileType cpp     set noet ts=8 sw=0
-	au FileType cpp     set noet ts=4
+	au FileType cpp     set et ts=4 sw=0
 	au FileType glsl    set commentstring=\/\/\ %s
 	au Filetype scheme  setlocal expandtab sw=4 lispwords-=define
 	au FileType help    wincmd K
