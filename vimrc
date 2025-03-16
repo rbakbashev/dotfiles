@@ -5,7 +5,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'junegunn/fzf', { 'dir': '~/bin/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Konfekt/FastFold'
 Plug 'ludovicchabant/vim-gutentags', { 'commit': 'aa67e48f6c071ef4179dc30ac24ddf93e5eb6338' }
 Plug 'Raimondi/delimitMate'
 Plug 'romainl/vim-cool'
@@ -379,6 +378,11 @@ au BufRead,BufNewFile *.asm         set filetype=nasm
 au BufRead,BufNewFile *.h           set filetype=c
 au BufRead,BufNewFile SConscript    set filetype=python
 au BufRead,BufNewFile SConscriptDef set filetype=python
+
+" augroup fold_syntax_with_manual
+"   au BufReadPre * setlocal foldmethod=syntax
+"   au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
+" augroup END
 
 " cosmetic =====================================================================
 if (&t_Co > 8 || has("gui_running")) && !exists("syntax_on")
