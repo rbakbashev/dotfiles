@@ -5,7 +5,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'junegunn/fzf', { 'dir': '~/bin/fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ludovicchabant/vim-gutentags', { 'commit': 'aa67e48f6c071ef4179dc30ac24ddf93e5eb6338' }
 Plug 'Raimondi/delimitMate'
 Plug 'romainl/vim-cool'
 
@@ -112,9 +111,6 @@ else
 endif
 
 let g:mkdp_page_title = '${name}'
-
-let g:gutentags_enabled = 0
-let g:gutentags_ctags_tagfile = '.git/tags'
 
 let g:coc_start_at_startup = 1
 

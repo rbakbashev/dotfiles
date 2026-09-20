@@ -7,7 +7,6 @@ sudo apt install -y \
     clang \
     cmake \
     curl \
-    exuberant-ctags \
     fd-find \
     firefox \
     gcc \
