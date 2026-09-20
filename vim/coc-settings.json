@@ -6,5 +6,12 @@
 
     "diagnostic-languageserver.filetypes": {
         "sh": "shellcheck"
+    },
+
+    "languageserver": {
+        "wasm-language-tools": {
+            "command": "wat_server",
+            "filetypes": ["wat"]
+        }
     }
 }
