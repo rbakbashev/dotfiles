@@ -87,7 +87,7 @@ alias gr='git rebase'
 alias gri='git rebase -i'
 alias grc='git rebase --continue'
 alias grom='git rebase origin/master'
-alias gf='git fetch' # tfw no
+alias gf='git fetch'
 alias gsh='git show'
 alias grh='git reset HEAD'
 alias grsh='git reset --soft HEAD~1'
@@ -117,7 +117,7 @@ alias cb='cargo b'
 alias cbr='cargo b --release'
 alias cn='cargo clean'
 alias ct='cargo test'
-alias ctn='cargo test -j 1 -- --nocapture --test-threads 1'
+alias ctn='cargo test -- --nocapture --test-threads 1'
 alias ctq='cargo test --quiet'
 alias clp='cargo clippy --all-targets --all-features -- -W clippy::pedantic -W clippy::nursery -W clippy::unwrap_used'
 alias cf='cargo fmt'
@@ -172,6 +172,13 @@ function git-proof-of-work() {
 
         sleep 1
     done
+}
+
+function cjxlopt() {
+    cjxl --quality 100 --effort 11 --brotli_effort 11 --lossless_jpeg=0 --premultiply=1 \
+         --keep_invisible=0 --num_threads=-1 --allow_jpeg_reconstruction=0 \
+         --faster_decoding=4 --allow_expert_options \
+         "$1" "$2"
 }
 
 alias uniq_cons='awk '\''f!=$0&&f=$0'\'''
