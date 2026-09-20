@@ -1,9 +1,8 @@
 1. su
 2. sudo usermod -aG sudo username
-3. sudo visudo
-   amend last string to say %sudo ALL=(ALL:ALL) NOPASSWD: ALL
+3. echo '%sudo ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/lule
 4. logout and login
 5. sudo apt install git
-6. git clone https://github.com/ruslashev/dotfiles
+6. git clone https://github.com/rbakbashev/dotfiles
 7. ./scripts/new-system.sh
 8. logout and login
