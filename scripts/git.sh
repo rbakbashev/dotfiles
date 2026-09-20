@@ -10,8 +10,10 @@ git config --global init.defaultBranch master
 git config --global commit.verbose true
 git config --global branch.sort -committerdate
 git config --global tag.sort version:refname
+git config --global tag.gpgsign true
 git config --global diff.algorithm histogram
 git config --global diff.colorMoved false
+git config --global advice.detachedHead false
 
 binary=$(find -L /usr -name diff-highlight -type f 2> /dev/null | head -n 1)
 
