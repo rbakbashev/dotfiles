@@ -27,24 +27,6 @@ declare -a dotfiles=(
 	'zshrc.local'
 )
 
-declare -a old_linux_dotfiles=(
-	'old/conkyrc'
-	'old/xinitrc'
-	'old/Xresources'
-	'old/xscreensaver'
-	'old/zprofile'
-)
-
-# Disabled for less intervention during install
-while false; do
-	read -q "yn?Install old linux dotfiles? "
-	case $yn in
-		[Yy]* ) dotfiles+=($old_linux_dotfiles); break;;
-		[Nn]* ) break;;
-		* ) echo "y or n.";;
-	esac
-done
-
 echo
 
 cd ~/dotfiles
