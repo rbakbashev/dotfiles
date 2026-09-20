@@ -208,8 +208,6 @@ nmap <silent> <Leader>ah :call CocActionAsync('doHover')<CR>
 nnoremap <Leader>ce :CocEnable<CR>
 nnoremap <Leader>cd :CocDisable<CR>
 
-nnoremap <Leader>rg :Rg<CR>
-
 nnoremap Q @q
 
 nnoremap <S-l> gt
@@ -243,7 +241,7 @@ vnoremap <C-g> "*y
               \:setlocal filetype=git<CR>
               \ggdd<CR>
 
-" disable :X. purposedfully remap not to <nop>
+" disable :X. purposefully remap to not <nop>
 cnoreabbrev X asdf
 
 nnoremap <Up> <C-y>
@@ -302,7 +300,7 @@ set sidescrolloff=5             " How many lines to keep visible when scrolling
 set smartcase                   " Ignore case
 set splitright                  " Split new (vertical) windows to the right
 set synmaxcol=200               " stop syntax highlighting past this column
-set tabpagemax=50               " 50 tabs (:tabe, vim -p, ..) max
+set tabpagemax=100              " 100 tabs (:tabe, vim -p, ..) max
 set tabstop=4                   " A tab character is displayed as 4 spaces max
 set termguicolors               " enable use of 24-bit colors in terminals
 set undodir=~/.vim/undo
