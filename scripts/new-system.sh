@@ -7,8 +7,8 @@ cd ~/dotfiles/scripts/
 echo '=== 1/9: packages.sh'
 ./packages.sh
 
-echo '=== 2/9: zshrc.sh'
-./zshrc.sh
+echo '=== 2/9: zsh.sh'
+./zsh.sh
 
 echo '=== 3/9: set-links.sh'
 ./set-links.sh
