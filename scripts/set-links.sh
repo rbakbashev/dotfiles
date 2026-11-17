@@ -21,7 +21,6 @@ print_error()
 
 declare -a dotfiles=(
 	'gdbinit'
-	'gvimrc'
 	'tmux.conf'
 	'vimrc'
 	'zshrc.local'
