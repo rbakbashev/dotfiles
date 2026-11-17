@@ -1,12 +1,12 @@
 #!/bin/zsh
 
-# Credit to https://github.com/nicksp/dotfiles/blob/master/setup.sh
-
 print_result()
 {
-	[[ $1 -eq 0 ]] \
-		&& print_success "$2" \
-		|| print_error "$2"
+	if [[ $? -eq 0 ]]; then
+		print_success "$1"
+	else
+		print_error "$1"
+	fi
 }
 
 print_success()
@@ -26,8 +26,6 @@ declare -a dotfiles=(
 	'zshrc.local'
 )
 
-echo
-
 cd ~/dotfiles
 
 for i in $dotfiles; do
@@ -36,11 +34,11 @@ for i in $dotfiles; do
 
 	if [[ ! -e "$link_name" ]]; then
 		ln -sf "$target" "$link_name"
-		print_result $? "$link_name -> $target"
+		print_result "$link_name -> $target"
 	elif [[ "$(readlink "$link_name")" == "$target" ]]; then
 		print_success "link already exists: $link_name -> $target"
 	else
-		local target_type=""
+		target_type=""
 		if [[ -d "$target" ]]; then
 			target_type="directory"
 		else
