@@ -4,30 +4,27 @@ set -e
 
 cd ~/dotfiles/scripts/
 
-echo '=== 1/9: packages.sh'
+echo '=== 1/8: packages.sh'
 ./packages.sh
 
-echo '=== 2/9: zsh.sh'
+echo '=== 2/8: zsh.sh'
 ./zsh.sh
 
-echo '=== 3/9: set-links.sh'
+echo '=== 3/8: set-links.sh'
 ./set-links.sh
 
-echo '=== 4/9: git.sh'
+echo '=== 4/8: git.sh'
 ./git.sh
 
-echo '=== 5/9: alacritty.sh'
+echo '=== 5/8: alacritty.sh'
 ./alacritty.sh
 
-echo '=== 6/9: fontconfig.sh'
-./fontconfig.sh
+echo '=== 6/8: fonts.sh'
+./fonts.sh
 
-echo '=== 7/9: rustup.sh'
+echo '=== 7/8: rustup.sh'
 ./rustup.sh
 
-echo '=== 8/9: monaco.sh'
-./monaco.sh
-
-echo '=== 9/9: vim.sh'
+echo '=== 8/8: vim.sh'
 ./vim.sh
 
