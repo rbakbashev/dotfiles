@@ -2,5 +2,5 @@
 
 mkdir -p ~/.config/fontconfig
 
-cp ../fonts.conf ~/.config/fontconfig
+ln -s ~/dotfiles/fonts.conf ~/.config/fontconfig
 
